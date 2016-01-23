@@ -10,6 +10,9 @@ module.exports = function(grunt) {
             app: {
                 src: 'public/index.html'
             }
+        },
+        less: {
+            
         }
     });
     
