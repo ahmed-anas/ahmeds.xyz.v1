@@ -5,6 +5,7 @@ var fs = require('fs');
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-wiredep');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     grunt.initConfig({
         wiredep: {
@@ -21,12 +22,30 @@ module.exports = function(grunt) {
                     ]
                 },
                 files:{
-                     'public/css/compiled/flipper.css': 'public/less/flipper.less'
+                     'public/dist/css/flipper.css': 'public/less/flipper.less'
                 }
             }
+            
+        },
+        concat: {
+            options: {
+                separator: ';',
+            },
+            dist: {
+                src: [
+                    'public/app/modules.js',
+                    'public/app/controllers/*.js',
+                    'public/app/routes.js'
+                ],
+                dest: 'public/dist/js/angularApp.js',
+            },
+            
+        },
+        copy: {
             
         }
     });
     
+    grunt.registerTask('build', ['less', 'concat']);
 }
 

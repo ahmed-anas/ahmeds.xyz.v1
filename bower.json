@@ -20,15 +20,16 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.6"
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.9"
   },
-    "overrides": {
-        "bootstrap": {
-            "main": [
-                "dist/js/bootstrap.js",
-                "dist/css/bootstrap.css",
-                "less/bootstrap.less"
-            ]
-        }
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css",
+        "less/bootstrap.less"
+      ]
     }
+  }
 }

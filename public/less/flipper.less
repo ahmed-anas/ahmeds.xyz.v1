@@ -1,35 +1,49 @@
 @import "bootstrap/less/variables.less";
+@import "bootstrap/less/mixins/vendor-prefixes.less";
 
+@gray-lightest:           lighten(@gray-base, 97%); // #eee
+@flipper-back-color: #88B6C7;
 .flipper-row{
-    background-color: white;
-    
     >*
     {
-        border: 1px;
-        border-color: @gray-light;
-        border-collapse: collapse;
-        border-style: solid;
-        padding: 10px;
+        margin-bottom: 20px;
         .front{
-            background-color: @gray-lighter;
+            background-color: @gray-lightest;
+            padding: 20px;
         }
         .back{
-            background-color: #4CC5F2;
+            background-color: @flipper-back-color;
         }
-        /*&:nth-child(even){
-            .front{
-                background-color: @gray-lighter;
-            }
+        .back, .front{
+            border-radius: 25px;
         }
-         &:nth-child(even){
-            .front{
-                background-color: @gray-lighter;
-            }
-        }*/
     }
     
-   
+    
+    .invite-flipper{
+        .front
+        {
+            span.glyphicon
+            {
+                font-size: 8vw;
+                top: 1.5vw;
+                line-height: 100%;
+                display: block;
+                height: 100%;
+                vertical-align: middle;
+                color: #fff;
+            }
+        }
+        
+        .front, .back
+        {
+            border-style: dashed;
+            border-color: @gray-light;
+        }
+    }
 }
+
+    
 .alt-color-gray-light > *{
     
 }   
@@ -76,16 +90,26 @@ author says, and I quote (from comments) "Use it however you’d like!"
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
+    
+    
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+    padding: 20px;
+    
+    a{
+        color: @gray-lighter;
+        .transition(all .2s ease-in);
+        
+        &:hover{
+            color: #fff;
+        }
+    }
+    
 }
 
 
-.padding-less.row > div
-{
-    padding-left: 0px;
-    padding-right: 0px;
-}
+
+

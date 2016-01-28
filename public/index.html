@@ -18,7 +18,7 @@
     <!-- Custom CSS -->
     <link href="css/agency.css" rel="stylesheet">
     <link href="css/agency-modified.css" rel="stylesheet">
-    <link href="css/compiles/flipper.css" rel="stylesheet">
+    <link href="dist/css/flipper.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -38,7 +38,7 @@
 
 </head>
 
-<body id="page-top" class="index">
+<body data-ng-app="app" id="page-top" class="index">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -94,7 +94,7 @@
     </header>
 
     <!-- Services Section -->
-    <div id="services">
+    <div id="services" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -144,11 +144,12 @@
                     <small> And many more..</small>
                     <br /><br />
                 </div>
+            </div>
         </div>
     </div>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
+    <section id="portfolio" class="">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -156,35 +157,46 @@
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
-            <div class="row padding-less flipper-row">
-                <div class="col-lg-3">
+            <div class="row padding-less flipper-row" data-ng-controller="Flipper">
+                <div class="col-md-3 col-sm-6" data-ng-repeat="company in portfolioCompanies">
                     <div class="flip-container square-element alt-color-grid" ontouchstart="this.classList.toggle('hover');">
                         <div class="flipper">
                             <div style="" class="front">
-                                <img src="img/logos/companies/groopic_175_175.png" style="width: 100%; height:auto;" />
+                                <img data-ng-src="{{company.logo}}" style="width: 100%; height:auto;" />
                                 <!-- front content -->
                             </div>
-                            <div style="" class="back">
-                                back
+                            <div style="" class="back text-center">
+                                {{company.description}}
                                 <!-- back content -->
+                                <br />
+                                <br />
+                                <h3>
+                                    <a href="{{company.website}}"> {{company.companyName}}</a>
+                                </h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="flip-container square-element" ontouchstart="this.classList.toggle('hover');">
+                
+                <div class="col-md-3 col-sm-6" >
+                    <div class="flip-container square-element alt-color-grid invite-flipper" ontouchstart="this.classList.toggle('hover');">
                         <div class="flipper">
-                            <div style="" class="front">
-                                <img src="img/logos/companies/groopic_175_175.png" style="width: 100%; height:auto;" />
+                            <div style="" class="front text-center">
+                                <span class="glyphicon glyphicon-user" style="width: 100%; height: 100%;" aria-hidden="true"></span>
                                 <!-- front content -->
                             </div>
-                            <div style="" class="back">
-                                back
-                                <!-- back content -->
+                            <div style="" class="back text-center">
+                                You could be next!
+                                <br />
+                                <br />
+                                <h3>
+                                    <a href="#contact"> Contact us</a>
+                                </h3>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -694,6 +706,7 @@
     <!-- bower:js -->
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/angular/angular.js"></script>
     <!-- endbower -->
     <!-- jQuery -->
 
@@ -711,6 +724,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
+    
+    <script src="dist/js/angularApp.js"></script>
 
 </body>
 
