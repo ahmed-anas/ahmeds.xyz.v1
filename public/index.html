@@ -302,9 +302,12 @@
             <div class="row">
                 <div class="col-md-4" style="height:300px">
                     <div style="background-color: white; border-radius: 20px; height:300px; padding:10px; ">
-                        <button class="btn btn-success" data-ng-click="setWebsite('ahmeds.xyz')"> ahmeds.xyz </button>
-                        <button class="btn btn-default" data-ng-click="setWebsite('wwc')"> WWC </button>
-                        <button class="btn btn-default" data-ng-click="setWebsite('admin')"> Admin Panel </button>
+                        <button class="btn" data-ng-click="setWebsite('ahmeds.xyz')" 
+                            ng-class="{'btn-success':currentWebsite=='origin', 'btn-default':currentWebsite!='origin'}"> ahmeds.xyz </button>
+                        <button class="btn" data-ng-click="setWebsite('wwc')"
+                            ng-class="{'btn-success':currentWebsite=='wwc', 'btn-default':currentWebsite!='wwc'}"> WWC </button>
+                        <button class="btn" data-ng-click="setWebsite('admin')"
+                            ng-class="{'btn-success':currentWebsite=='admin', 'btn-default':currentWebsite!='admin'}"> Admin Panel </button>
                         <hr/>
                         <div class="slider-container" style=" left:0px; display: inline-block;">
                             <div>
@@ -326,7 +329,7 @@
                             <div style="background-color: white; overflow-y: scroll; overflow-x: hidden; height: 300px; overflow-x: hidden;">
                                 <div id="iframe-height-adjuster" style="overflow: hidden;">
                                     <iframe width="{{iframeDim.width}}" height="{{iframeDim.height}}" style="transform-origin: 0 0; overflow:hidden"  
-                                        ng-style="iframeStyle" onload="iframeLoaded()" src="" frameBorder="0">
+                                        ng-style="iframeStyle" onload="typeof iframeLoaded == 'function' && iframeLoaded();" src="" frameBorder="0">
                                     </iframe>
                                 </div>
                             </div>

@@ -25,14 +25,14 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
         width: $('#iframe-container').width(),
         height: $('#iframe-container').height()
     };
-    
+    $scope.currentWebsite = '';
     
     var iframe = $('#iframe-container iframe');
     var iframeHeightAdjuster = $('#iframe-height-adjuster'); 
     var interval = null;
     window.adjustIframeHeight = function()
     {
-        iframe[0].contentWindow.document.body.style.overflow = 'hidden';
+        $(iframe[0].contentWindow.document.body).css('overflow', 'hidden');
         
         interval === null || clearInterval(interval);
         
@@ -42,11 +42,17 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
         
         
         interval = setInterval(function() {
-            var currentBodyHeight = $(iframe[0].contentWindow.document.body).height() + 1;
+            
+            if($scope.currentWebsite == 'admin')
+            {
+                $(iframe[0].contentWindow.document.body).find('#page-wrapper').css('min-height','0px');
+            }
+            $(iframe[0].contentWindow.document.body).css('height','auto');
+            var currentBodyHeight = $(iframe[0].contentWindow.document.body).height();
             
             iframe.height(currentBodyHeight);
             
-            var currentScrollHeight = 1 + ($(iframe[0].contentWindow.document.body).prop('scrollHeight') * $scope.iframeDim.scale);
+            var currentScrollHeight = ($(iframe[0].contentWindow.document.body).prop('scrollHeight') * $scope.iframeDim.scale);
              
             iframeHeightAdjuster.height(currentScrollHeight);
             
@@ -65,8 +71,7 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
         
     }
     
-    //somtimes fails to initialize
-    setInterval(window.adjustIframeHeight, 2500);
+    
     
     
     $scope.currentSizeText = 'Move slider to adjust size';
@@ -95,14 +100,27 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
     
     $scope.setWebsite = function(website)
     {
+        $scope.currentWebsite = website;
         if(website == 'wwc')
-            iframe.attr('src', 'http://worldwidecargoservices.co.uk');
+        {
+            iframe.attr('src', 'http://localhost:3000/app/websitefetch?website=wwc');
+        }
         else if (website == 'admin')
-            iframe.attr('src','http://blackrockdigital.github.io/startbootstrap-sb-admin-2/pages/index.html');
+        {
+            iframe.attr('src','/websites/sbadmin2');
+        }
         else
+        {
+            $scope.currentWebsite = "origin";
             iframe.attr('src',location.origin);
-            
+        }    
     }
     $scope.setWebsite();
+    window.iframeLoaded = function(){
+        //somtimes fails to initialize
+        window.adjustIframeHeight();
+        setTimeout(window.adjustIframeHeight, 2500);
+        
+    }
 
 }]);
