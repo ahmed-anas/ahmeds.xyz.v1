@@ -19,6 +19,8 @@
     <link href="css/agency.css" rel="stylesheet">
     <link href="css/agency-modified.css" rel="stylesheet">
     <link href="dist/css/flipper.css" rel="stylesheet">
+    
+    <link href="components/slider/slider.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -198,6 +200,7 @@
                 </div>
                 
             </div>
+            <!--
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
@@ -284,9 +287,55 @@
                     </div>
                 </div>
             </div>
+            -->
         </div>
     </section>
 
+    <section class="bg-light-gray" id="repsonvie-design" ng-controller="Responsive">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Responsive Design</h2>
+                    <h3 class="section-subheading text-muted">Developing with a mobile-first approach so your website looks gorgeous on everything.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="height:300px">
+                    <div style="background-color: white; border-radius: 20px; height:300px; padding:10px; ">
+                        <button class="btn btn-success" data-ng-click="setWebsite('ahmeds.xyz')"> ahmeds.xyz </button>
+                        <button class="btn btn-default" data-ng-click="setWebsite('wwc')"> WWC </button>
+                        <button class="btn btn-default" data-ng-click="setWebsite('admin')"> Admin Panel </button>
+                        <hr/>
+                        <div class="slider-container" style=" left:0px; display: inline-block;">
+                            <div>
+                                <small style="position: absolute;">Move slider to adjust size</small>
+                                <input ng-model="iframeWidth" ng-change="onIframeResize()" type='range' min='500' max='1500' step='50' value='500'/>
+                            </div>
+                            
+                            Current Size: <small>{{currentSizeText}}</small>
+                        </div>
+                        <hr />
+                        
+                        <p>Creating content that fits perfectly anywhere, anytime on anything. With responsive design, your website will look gorgeous on all devices</p>
+                    </div>
+                    
+                </div>
+                <div class="col-md-8">
+                    <div style="overflow: hidden; -webkit-filter: drop-shadow(1px 1px 1px rgba(255,255,255,0.01)); border-radius: 20px; box-shadow: 4px 4px rgba(255,255,255,0.5);">
+                        <div  id="iframe-container">
+                            <div style="background-color: white; overflow-y: scroll; overflow-x: hidden; height: 300px; overflow-x: hidden;">
+                                <div id="iframe-height-adjuster" style="overflow: hidden;">
+                                    <iframe width="{{iframeDim.width}}" height="{{iframeDim.height}}" style="transform-origin: 0 0; overflow:hidden"  
+                                        ng-style="iframeStyle" onload="iframeLoaded()" src="" frameBorder="0">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
     <!-- About Section -->
     <section id="about">
         <div class="container">
