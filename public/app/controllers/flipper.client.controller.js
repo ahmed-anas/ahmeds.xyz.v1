@@ -32,5 +32,17 @@ angular.module('app').controller('Flipper', ['$scope', function($scope){
             website: 'http://psychability.org',
             logo: 'img/logos/companies/psychability_175_175.png'
         },
+        {
+            companyName: 'Rezo Systems',
+            description: 'Providing web-based reservation systems to different clients.',
+            website: 'http://www.rezosystems.com',
+            logo: 'img/logos/companies/rezosystems_text_175_175.png'
+        },
+        {
+            companyName: 'World Wide Cargo Services',
+            description: 'International cargo company in the UK.',
+            website: 'http://worldwidecargoservices.co.uk',
+            logo: 'img/logos/companies/wwc_175_175.png'
+        },
     ];
 }]);

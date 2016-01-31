@@ -22,7 +22,7 @@ module.exports = function(grunt) {
                     ]
                 },
                 files:{
-                     'public/dist/css/flipper.css': 'public/less/flipper.less'
+                     '.tmp/css/flipper.css': 'public/less/flipper.less'
                 }
             }
             
@@ -32,12 +32,16 @@ module.exports = function(grunt) {
                 separator: ';',
             },
             dist: {
-                src: [
-                    'public/app/modules.js',
-                    'public/app/controllers/*.js',
-                    'public/app/routes.js'
-                ],
-                dest: 'public/dist/js/angularApp.js',
+                files: {
+                    'public/dist/js/angularApp.js': 
+                        [
+                            'public/app/modules.js',
+                            'public/app/controllers/*.js',
+                            'public/app/routes.js'
+                        ],
+                    'public/dist/css/flipper.css': ['.tmp/css/flipper.css'],
+                    'public/dist/css/main.css': ['public/css/loader1.css']
+                }
             },
             
         },

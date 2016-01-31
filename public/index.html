@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>Portfolio - Ahmed Anas</title>
 
     <!-- bower:css -->
     <link rel='stylesheet' href='lib/bootstrap/dist/css/bootstrap.css' />
@@ -19,6 +19,7 @@
     <link href="css/agency.css" rel="stylesheet">
     <link href="css/agency-modified.css" rel="stylesheet">
     <link href="dist/css/flipper.css" rel="stylesheet">
+    <link href="dist/css/main.css" rel="stylesheet">
     
     <link href="components/slider/slider.css" rel="stylesheet">
 
@@ -36,7 +37,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-   
+    
 
 </head>
 
@@ -53,7 +54,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">AhmedsXYZ</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,13 +64,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">Technologies</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#repsonvie-design">Responsive Design</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Team</a>
@@ -107,35 +108,35 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-3">
+                <div class="col-md-3 col-xs-6">
                     <img src="img/logos/nodejs.png" />
                     <h4 class="service-heading">Node.js</h4>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-xs-6">
                     <img src="img/logos/angularjs.png" />
                     <h4 class="service-heading">Angular</h4>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-xs-6">
                     <img src="img/logos/mongodb.png" />
                     <h4 class="service-heading">MongoDB</h4>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-xs-6">
                     <img src="img/logos/express.png" />
                     <h4 class="service-heading">Express</h4>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-xs-6">
                     <img src="img/logos/php.png" />
                     <h4 class="service-heading">PHP</h4>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-xs-6">
                     <img src="img/logos/MySQL.png" />
                     <h4 class="service-heading">MySQL</h4>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-xs-6">
                     <img src="img/logos/meanjs.png" />
                     <h4 class="service-heading">mean.js</h4>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-xs-6">
                     <img src="img/logos/css3_html5.png" />
                     <h4 class="service-heading">HTML5 & CSS3</h4>
                 </div>
@@ -156,11 +157,11 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Companies I've helped in achieving their goals</h3>
                 </div>
             </div>
             <div class="row padding-less flipper-row" data-ng-controller="Flipper">
-                <div class="col-md-3 col-sm-6" data-ng-repeat="company in portfolioCompanies">
+                <div class="col-md-3 col-xs-6" data-ng-repeat="company in portfolioCompanies">
                     <div class="flip-container square-element alt-color-grid" ontouchstart="this.classList.toggle('hover');">
                         <div class="flipper">
                             <div style="" class="front">
@@ -173,14 +174,14 @@
                                 <br />
                                 <br />
                                 <h3>
-                                    <a href="{{company.website}}"> {{company.companyName}}</a>
+                                    <a href="{{company.website}}" target="_blank"> {{company.companyName}}</a>
                                 </h3>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-3 col-sm-6" >
+                <div class="col-md-3 col-xs-6" >
                     <div class="flip-container square-element alt-color-grid invite-flipper" ontouchstart="this.classList.toggle('hover');">
                         <div class="flipper">
                             <div style="" class="front text-center">
@@ -192,7 +193,7 @@
                                 <br />
                                 <br />
                                 <h3>
-                                    <a href="#contact"> Contact us</a>
+                                    <a class="page-scroll" href="#contact"> Contact me</a>
                                 </h3>
                             </div>
                         </div>
@@ -312,7 +313,7 @@
                         <div class="slider-container" style=" left:0px; display: inline-block;">
                             <div>
                                 <small style="position: absolute;">Move slider to adjust size</small>
-                                <input ng-model="iframeWidth" ng-change="onIframeResize()" type='range' min='500' max='1500' step='50' value='500'/>
+                                <input ng-model="iframeWidth" ng-change="onIframeResize()" type='range' min='500' max='1500' step='50'/>
                             </div>
                             
                             Current Size: <small>{{currentSizeText}}</small>
@@ -339,153 +340,88 @@
             </div>
         </div>
     </section>
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
+   
     <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
+    <section id="team">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">My compatriots <small>(and minons)</small></h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">Me & My Compatriots <small>(or minons)</small></h2>
+                    <h3 class="section-subheading text-muted">Those who I call upon when time demands.</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
+                        <img src="img/team/me.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Me (Ahmed Anas)</h4>
+                        <p class="text-muted">Full-stack Web Developer (MEAN + LAMP stacks)</p>
+                        <!--<ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
+                        <img src="img/team/ahmad_saad.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ahmad Saad</h4>
+                        <p class="text-muted">IOS developer, back-end expert</p>
+                        <!--<ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
+                        <img src="img/team/tabish.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Tabish Munir</h4>
+                        <p class="text-muted">UI/UX Expert, SEO</p>
+                        <!--<ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
-                        </ul>
+                        </ul>-->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="img/team/ahmed_ehsan.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ahmed Ehsan</h4>
+                        <p class="text-muted">Android developer, PHP/Laravel expert</p>
+                        <!--<ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>-->
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p class="large text-muted">The masterful team with individual skills that aid clients in building the perfect product.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Clients Aside -->
-    <aside class="clients">
+    <!--<aside class="clients">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -510,15 +446,15 @@
                 </div>
             </div>
         </div>
-    </aside>
+    </aside>-->
     
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">Contact Me</h2>
+                    <h3 style="color:white;" class="section-subheading text-muted">Or email directly at syed.ahmed.anas@gmail.com</h3>
                 </div>
             </div>
             <div class="row">
@@ -535,7 +471,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" class="form-control" placeholder="Your Phone # / Skype Id *" id="phone" required data-validation-required-message="Please enter your phone number.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -548,7 +484,14 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
+                                <button type="submit" class="btn btn-xl">Send Message 
+                                    <div style="display: none;" id="send-message-loader" class="cssload-thecube">
+                                        <div class="cssload-cube cssload-c1"></div>
+                                        <div class="cssload-cube cssload-c2"></div>
+                                        <div class="cssload-cube cssload-c4"></div>
+                                        <div class="cssload-cube cssload-c3"></div>
+                                    </div> 
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -561,17 +504,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                    <span class="copyright">Copyright &copy; ahmeds.xyz 2016</span>
                 </div>
                 <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
+                    <!--<ul class="list-inline social-buttons">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
@@ -778,6 +721,8 @@
     <script src="js/agency.js"></script>
     
     <script src="dist/js/angularApp.js"></script>
+    
+    
 
 </body>
 

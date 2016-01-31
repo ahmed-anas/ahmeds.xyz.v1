@@ -2,3 +2,4 @@ public/lib/
 public/css/compiled/
 public/dist/
 node_modules/
+.tmp/

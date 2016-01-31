@@ -8,7 +8,6 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
     };
     
     
-    $scope.iframeHeight = false;
     $scope.iframeWidth = false;
     $scope.iframeStyle = {};
     
@@ -117,10 +116,16 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
     }
     $scope.setWebsite();
     window.iframeLoaded = function(){
+        $scope.onIframeResize();
         //somtimes fails to initialize
         window.adjustIframeHeight();
         setTimeout(window.adjustIframeHeight, 2500);
         
     }
+    
+    $scope.isIframe = function(){
+        window.self !== window.top;
+    }
+    
 
 }]);
