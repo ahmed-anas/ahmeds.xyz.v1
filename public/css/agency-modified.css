@@ -1,3 +1,11 @@
 #services img{
     width: 100%;
 }
+header{
+    background-image: url('../img/header2-bg.jpg');
+}
+
+.intro-lead-in{
+    color: black;
+    color: rgba(0, 0, 0, 0.7)
+}

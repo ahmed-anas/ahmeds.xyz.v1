@@ -89,7 +89,7 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Our Studio!</div>
+                <div class="intro-lead-in">Welcome To My Playground!</div>
                 <div class="intro-heading">It's Nice To Meet You</div>
                 <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
@@ -316,7 +316,7 @@
                                 <input ng-model="iframeWidth" ng-change="onIframeResize()" type='range' min='500' max='1500' step='50'/>
                             </div>
                             
-                            Current Size: <small>{{currentSizeText}}</small>
+                            Current Size: <small ng-style="currentSizeTextStyle">{{currentSizeText}}</small>
                         </div>
                         <hr />
                         

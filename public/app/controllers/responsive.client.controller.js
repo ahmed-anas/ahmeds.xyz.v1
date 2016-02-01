@@ -70,7 +70,7 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
         
     }
     
-    
+    $scope.currentSizeTextStyle = {color: 'red'};
     
     
     $scope.currentSizeText = 'Move slider to adjust size';
@@ -81,15 +81,30 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
             $scope.iframeDim.scale = containerSize.width / $scope.iframeDim.width;
             
             if($scope.iframeWidth < 768)
+            {
+                $scope.currentSizeTextStyle.color = "#EF26FB";
                 $scope.currentSizeText = 'Phones / Extra Small Devices';
+            }
             else if($scope.iframeWidth < 992)
+            {
+                $scope.currentSizeTextStyle.color = "#7B8227";
                 $scope.currentSizeText = 'Tables / Small Devices';
+            }
             else if($scope.iframeWidth < 1200)
+            {
+                $scope.currentSizeTextStyle.color = "#52BF46";
                 $scope.currentSizeText = 'Laptops / Desktops / Medium Devices';
+            }
             else if($scope.iframeWidth >= 1200) 
+            {
+                $scope.currentSizeTextStyle.color = "#0035FF";
                 $scope.currentSizeText = 'Large Desktops / Large Devices';
+            }
             else
+            {
+                $scope.currentSizeTextStyle.color = "red";
                 $scope.currentSizeText = 'Move slider to adjust size';
+            }
         }   
         $scope.iframeStyle.transform = 'scale(' + $scope.iframeDim.scale + ',' + $scope.iframeDim.scale + ')';
         window.adjustIframeHeight();
