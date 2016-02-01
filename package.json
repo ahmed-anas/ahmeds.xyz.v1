@@ -12,6 +12,7 @@
   "dependencies": {
     "bower": "~1.7.2",
     "grunt-cli": "latest",
+    "request": "latest",
     "body-parser": "~1.13.2",
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
