@@ -18,7 +18,8 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "nodemailer": "^2.0.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "bower": "~1.7.2"
   },
   "devDependencies": {
     "grunt-bower-install": "^1.6.0",
