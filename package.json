@@ -21,9 +21,6 @@
     "morgan": "~1.6.1",
     "nodemailer": "^2.0.0",
     "serve-favicon": "~2.3.0",
-//   },
-//   "devDependencies": {
-    
     "grunt-bower-install": "^1.6.0",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "^0.8.2",
