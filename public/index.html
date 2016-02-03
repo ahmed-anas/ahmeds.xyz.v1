@@ -563,7 +563,7 @@
                 else if(data.isProperty)
                     returnData = $(data.selector).prop(e.index);
 
-                e.source.postMessage(returnData, e.origin);
+                e.source.postMessage(returnData, "*");
             }, false);
             
         });
