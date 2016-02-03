@@ -47,6 +47,7 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
                 $(iframe[0].contentWindow.document.body).find('#page-wrapper').css('min-height','0px');
             }
             $(iframe[0].contentWindow.document.body).css('height','auto');
+            
             var currentBodyHeight = $(iframe[0].contentWindow.document.body).height();
             
             iframe.height(currentBodyHeight);
@@ -88,7 +89,7 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
             else if($scope.iframeWidth < 992)
             {
                 $scope.currentSizeTextStyle.color = "#7B8227";
-                $scope.currentSizeText = 'Tables / Small Devices';
+                $scope.currentSizeText = 'Tablets / Small Devices';
             }
             else if($scope.iframeWidth < 1200)
             {
