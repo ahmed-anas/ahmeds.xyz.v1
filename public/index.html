@@ -552,6 +552,20 @@
     <script src="js/agency.js"></script>
     
     <script src="dist/js/angularApp.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            window.addEventListener("getInfo", function(e){
+                var data = e.data;
+                if(data.isCSS)
+                    return $(data.selector).css(e.index);
+                else if(data.isProperty)
+                    return $(data.selector).prop(e.index);
+                else
+                    return null;
+            }, false)
+        });
+    </script>
+    
     
     
 
