@@ -559,9 +559,9 @@
                 var data = e.data;
                 var returnData = null;
                 if(data.isCSS)
-                    returnData = $(data.selector).css(e.index);
+                    returnData = $(data.selector).css(data.index);
                 else if(data.isProperty)
-                    returnData = $(data.selector).prop(e.index);
+                    returnData = $(data.selector).prop(data.index);
 
                 e.source.postMessage(returnData, "*");
             }, false);
