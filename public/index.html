@@ -564,6 +564,9 @@
                     returnData = $(data.selector).prop(data.index);
 
                 e.source.postMessage(returnData, "*");
+                
+                if(data.responsiveDemo)
+                    $('html').css('overflow', 'hidden');
             }, false);
             
         });
