@@ -64,8 +64,6 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
             
             previousBodyHeight = currentBodyHeight; 
             previousScrollHeight = currentScrollHeight;
-            
-            console.log('interval called');
                 
         }, 200);
         
