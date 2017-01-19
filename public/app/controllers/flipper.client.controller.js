@@ -3,6 +3,12 @@
 angular.module('app').controller('Flipper', ['$scope', function($scope){
     $scope.portfolioCompanies = [
         {
+            companyName: 'Madvalorem',
+            description: 'Madvalorem: Connecting People Through Properties.',
+            website: 'http://madvalorem.com',
+            logo: 'img/logos/companies/madvalorem_175_175.png'
+        },
+        {
             companyName: 'Groopic',
             description: 'Groopic App: Putting photographer back in the picture.',
             website: 'http://groopic.com',
@@ -11,7 +17,7 @@ angular.module('app').controller('Flipper', ['$scope', function($scope){
         {
             companyName: 'Ingrain',
             description: 'Video augmentation. Revolutionizing the Product Placement industry.',
-            website: 'http://ingrain.xyz',
+            website: 'http://ingrain.io',
             logo: 'img/logos/companies/ingrain_175_175.png'
         },
         {
