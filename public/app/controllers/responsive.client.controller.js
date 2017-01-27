@@ -109,7 +109,7 @@ angular.module('app').controller('Responsive', ['$scope', function($scope){
         window.adjustIframeHeight();
     }
     
-    $('#iframe-container iframe').load(window.adjustIframeHeight);
+    $('#iframe-container iframe').on('load', window.adjustIframeHeight);
     
     $scope.setWebsite = function(website)
     {
